@@ -6,11 +6,18 @@ public class ShoppingManager {
 
     public void addProduct(int id, String name, double price, int quantity) {
 
-        Product p = new Product(id, name, price, quantity);
-        products.add(p);
-
-        System.out.println("Product Added Successfully");
+    for (Product p : products) {
+        if (p.id == id) {
+            System.out.println("Product ID Already Exists");
+            return;
+        }
     }
+
+    Product p = new Product(id, name, price, quantity);
+    products.add(p);
+
+    System.out.println("Product Added Successfully");
+}
 
     public void viewProducts() {
 

@@ -50,4 +50,4 @@ public class ShoppingConsoleApp {
 
         sc.close();
     }
-}
+}x  
