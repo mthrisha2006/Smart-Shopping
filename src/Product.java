@@ -11,6 +11,7 @@ public class Product {
         this.price = price;
         this.quantity = quantity;
     }
+    
 
     public void display() {
         System.out.println("ID       : " + id);

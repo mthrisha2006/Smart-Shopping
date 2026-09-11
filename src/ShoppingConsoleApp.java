@@ -12,7 +12,8 @@ public class ShoppingConsoleApp {
             System.out.println("\n--- Smart Shopping Management ---");
             System.out.println("1. Add Product");
             System.out.println("2. View Products");
-            System.out.println("3. Exit");
+            System.out.println("3. Delete Product");
+            System.out.println("4. Exit");
             System.out.print("Enter choice: ");
 
             int choice = sc.nextInt();
@@ -37,17 +38,23 @@ public class ShoppingConsoleApp {
 
                 manager.viewProducts();
 
-            } else if (choice == 3) {
+            }  else if (choice == 3) {
 
-                System.out.println("Thank You!");
-                break;
+    System.out.print("Enter Product ID: ");
+    int id = sc.nextInt();
 
-            } else {
+    manager.deleteProduct(id);
 
+} else if (choice == 4) {
+
+    System.out.println("Thank You!");
+    break;
+}
+             else {
                 System.out.println("Invalid Choice");
             }
         }
 
         sc.close();
     }
-}x  
+} 

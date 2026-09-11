@@ -18,11 +18,23 @@ public class ShoppingManager {
 
     System.out.println("Product Added Successfully");
 }
-
     public void viewProducts() {
 
         for (Product p : products) {
             p.display();
         }
     }
+    public void deleteProduct(int id) {
+
+    for (int i = 0; i < products.size(); i++) {
+
+        if (products.get(i).id == id) {
+            products.remove(i);
+            System.out.println("Product Deleted Successfully");
+            return;
+        }
+    }
+
+    System.out.println("Product ID Not Found");
+}
 }
